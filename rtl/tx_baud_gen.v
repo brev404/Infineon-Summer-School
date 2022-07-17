@@ -15,7 +15,7 @@ always@(posedge clock) begin
 end
 
 //BAUDRATE GENERATOR WITH 4 SELECTIONS
-always@(*) begin 
+always@(*) begin
 	case(baudrate_select)
 		0: tx_baud = (4'b1111 == num[3:0]) ? 1 : 0;
 		1: tx_baud = (5'b11111 == num[4:0]) ? 1 : 0;
